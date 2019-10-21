@@ -11,8 +11,20 @@
 # Assume your user is a developer — e.g. you don't need to write a user interface.
 
 def pig_latin(word)
-
+  if word.slice(0) == "a" ||
+     word.slice(0) == "e" ||
+     word.slice(0) == "i" ||
+     word.slice(0) == "o" ||
+     word.slice(0) == "u"
+     word += "way"
+  else
+    word = word.slice(1..word.length) + word.slice(0) + "ay"
+  end
+return word
 end
+puts pig_latin("bobby")
+
+
 
 ## Tests:
 
